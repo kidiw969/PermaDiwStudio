@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perma Diw Studio | Roblox Asset & System Hub</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.05); }
+            50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.15); }
+        }
+        .glow-box { animation: pulseGlow 4s infinite; }
+    </style>
+</head>
+<body class="bg-black text-neutral-200 min-h-screen selection:bg-white selection:text-black antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-neutral-900 bg-black/80 backdrop-blur-xl sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl overflow-hidden border border-neutral-700 shadow-2xl shrink-0 bg-neutral-900">
+                    <img src="logo.png" alt="Perma Diw Studio Logo" class="w-full h-full object-cover filter grayscale contrast-125">
+                </div>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg tracking-wider text-white uppercase">Perma Diw <span class="font-light text-neutral-400">Studio</span></h1>
+                    <p class="text-[10px] sm:text-[11px] text-neutral-400 tracking-widest uppercase">Roblox Architecture & Systems</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2.5">
+                <a href="https://www.youtube.com/channel/UCiSTRqsRTp0Lem3_qxYQIwA" target="_blank" class="bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white text-xs px-3.5 py-2 rounded-xl border border-neutral-800 transition flex items-center space-x-1.5">
+                    <i class="fa-brands fa-youtube text-sm"></i>
+                    <span class="hidden sm:inline font-medium">YouTube</span>
+                </a>
+                <a href="https://discord.gg/2Yuy2RR5B" target="_blank" class="bg-white hover:bg-neutral-200 text-black text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 font-semibold shadow-lg shadow-white/5">
+                    <i class="fa-brands fa-discord text-sm"></i>
+                    <span class="hidden sm:inline">Discord</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        
+        <!-- About Studio Section -->
+        <section class="bg-neutral-950 border border-neutral-800/80 rounded-3xl p-6 sm:p-12 mb-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-neutral-800/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-3xl">
+                <span class="inline-block bg-neutral-900 text-neutral-300 text-[11px] font-bold px-3.5 py-1.5 rounded-full border border-neutral-800 uppercase tracking-widest mb-4">Elite Developer Hub</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">The Architecture of Next-Gen Experience.</h2>
+                <p class="text-neutral-400 text-sm sm:text-base leading-relaxed mb-6 font-light">
+                    <strong class="text-white font-medium">Perma Diw Studio</strong> merevolusi standar pengembangan game Roblox melalui kurasi skrip tingkat lanjut. Selesaikan protokol verifikasi bertahap di bawah untuk membuka akses direktori unduhan file <span class="text-white font-medium">.rbxm</span>.
+                </p>
+                <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl text-xs text-neutral-300 space-y-2">
+                    <p><i class="fa-solid fa-gift text-white mr-2"></i><strong>Info Discord:</strong> Di server Discord kami, kami juga sering mengadakan <span class="text-white font-semibold">giveaway system paid</span> berbayar secara gratis untuk member!</p>
+                    <p><i class="fa-solid fa-comments text-white mr-2"></i><strong>Request Free System:</strong> Anda juga bisa merequest ingin dibuatkan sistem apa saja untuk kategori Free System di komunitas kami.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= KOTAK VERIFIKASI BERTAHAP ================= -->
+        <div id="verificationSection" class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-10 shadow-2xl max-w-2xl mx-auto text-center glow-box mb-16">
+            <div class="w-16 h-16 bg-neutral-900 text-white rounded-2xl flex items-center justify-center mx-auto mb-5 border border-neutral-800 text-xl shadow-inner">
+                <i class="fa-solid fa-lock" id="lockIcon"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-2">Protokol Verifikasi Berurutan</h3>
+            <p class="text-neutral-400 text-xs sm:text-sm mb-8 font-light leading-relaxed">
+                Anda harus menyelesaikan langkah pertama terlebih dahulu sebelum langkah berikutnya terbuka.
+            </p>
+
+            <!-- Daftar Langkah Bertahap -->
+            <div class="space-y-4 text-left mb-8">
+                
+                <!-- LANGKAH 1: SUBSCRIBE (Aktif Awal) -->
+                <div id="cardStep1" class="bg-neutral-900/60 border border-neutral-700 p-4 rounded-2xl transition">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                        <div class="flex items-center space-x-3.5">
+                            <span id="step1Badge" class="w-7 h-7 rounded-xl bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono font-bold shrink-0 border border-neutral-600">01</span>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white tracking-wide">Subscribe YouTube Channel</h4>
+                                <p id="textStep1" class="text-[11px] text-neutral-400 font-light">Klik tombol untuk mulai & verifikasi 30 detik.</p>
+                            </div>
+                        </div>
+                        <a id="btnStep1" href="https://www.youtube.com/channel/UCiSTRqsRTp0Lem3_qxYQIwA?sub_confirmation=1" target="_blank" onclick="triggerStep(1)" class="w-full sm:w-auto text-center bg-white hover:bg-neutral-200 text-black text-xs px-4 py-2.5 rounded-xl font-semibold transition shadow-md">
+                            <i class="fa-brands fa-youtube mr-1.5"></i> Subscribe
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LANGKAH 2: LIKE (Terkunci Awal) -->
+                <div id="cardStep2" class="bg-neutral-900/30 border border-neutral-800/80 p-4 rounded-2xl opacity-50 transition pointer-events-none">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                        <div class="flex items-center space-x-3.5">
+                            <span id="step2Badge" class="w-7 h-7 rounded-xl bg-neutral-900 text-neutral-500 flex items-center justify-center text-xs font-mono font-bold shrink-0 border border-neutral-800">02</span>
+                            <div>
+                                <h4 class="text-sm font-semibold text-neutral-400 tracking-wide">Like Featured Video</h4>
+                                <p id="textStep2" class="text-[11px] text-neutral-500 font-light">Terkunci (Selesaikan Langkah 1 dulu)</p>
+                            </div>
+                        </div>
+                        <a id="btnStep2" href="https://youtu.be/ZeDneNvOA3g" target="_blank" onclick="triggerStep(2)" class="w-full sm:w-auto text-center bg-neutral-800 text-neutral-500 text-xs px-4 py-2.5 rounded-xl font-medium transition border border-neutral-700 cursor-not-allowed">
+                            <i class="fa-solid fa-thumbs-up mr-1.5"></i> Like Video
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LANGKAH 3: COMMENT (Terkunci Awal) -->
+                <div id="cardStep3" class="bg-neutral-900/30 border border-neutral-800/80 p-4 rounded-2xl opacity-50 transition pointer-events-none">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                        <div class="flex items-center space-x-3.5">
+                            <span id="step3Badge" class="w-7 h-7 rounded-xl bg-neutral-900 text-neutral-500 flex items-center justify-center text-xs font-mono font-bold shrink-0 border border-neutral-800">03</span>
+                            <div>
+                                <h4 class="text-sm font-semibold text-neutral-400 tracking-wide">Leave a Feedback Comment</h4>
+                                <p id="textStep3" class="text-[11px] text-neutral-500 font-light">Terkunci (Selesaikan Langkah 2 dulu)</p>
+                            </div>
+                        </div>
+                        <a id="btnStep3" href="https://youtu.be/ZeDneNvOA3g" target="_blank" onclick="triggerStep(3)" class="w-full sm:w-auto text-center bg-neutral-800 text-neutral-500 text-xs px-4 py-2.5 rounded-xl font-medium transition border border-neutral-700 cursor-not-allowed">
+                            <i class="fa-solid fa-comment mr-1.5"></i> Comment
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <p id="globalStatus" class="text-xs text-neutral-400 font-mono">Status: Menunggu penyelesaian Langkah 01...</p>
+        </div>
+
+        <!-- ================= KONTEN FREE ASSETS (TERBUKA SETELAH SEMUA SELESAI) ================= -->
+        <div id="assetContentSection" class="hidden mb-16">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-3 border-b border-neutral-900 pb-5">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center space-x-3">
+                        <span class="bg-neutral-900 text-white p-2.5 rounded-2xl border border-neutral-800 text-sm"><i class="fa-solid fa-unlock"></i></span>
+                        <span>Open-Source Free Assets</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-neutral-400 font-light mt-1">Seluruh protokol verifikasi terlewati. Unduh file sistem gratis di bawah.</p>
+                </div>
+                <span class="bg-white text-black text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest">Access Granted</span>
+            </div>
+
+            <!-- Grid Kartu Free Assets -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Free Asset 1: Join Notification -->
+                <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-600 transition shadow-2xl group">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="bg-neutral-900 text-white p-3.5 rounded-2xl border border-neutral-800 group-hover:bg-white group-hover:text-black transition duration-300">
+                                <i class="fa-solid fa-bell text-lg"></i>
+                            </div>
+                            <span class="bg-neutral-900 text-neutral-300 text-[10px] font-mono font-bold px-3 py-1 rounded-full border border-neutral-800 uppercase tracking-wider">FREE SYSTEM</span>
+                        </div>
+                        <h4 class="font-bold text-xl text-white tracking-tight mb-2">Join Notification Engine</h4>
+                        <p class="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed mb-4">
+                            Sistem di mana jika owner, admin, atau developer map tersebut masuk ke dalam server, maka akan muncul notifikasi khusus ke semua pemain yang menandakan bahwa mereka telah bergabung ke server!
+                        </p>
+                    </div>
+                    <a href="https://www.mediafire.com/file/16sehdstmgl356p/Perma_Join_Notification_%2528FREE%2529.rbxm/file" target="_blank" class="w-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs py-3.5 rounded-2xl text-center transition shadow-lg tracking-wider uppercase flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download Asset</span>
+                    </a>
+                </div>
+
+                <!-- Free Asset 2: Donation Board -->
+                <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-600 transition shadow-2xl group">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="bg-neutral-900 text-white p-3.5 rounded-2xl border border-neutral-800 group-hover:bg-white group-hover:text-black transition duration-300">
+                                <i class="fa-solid fa-hand-holding-dollar text-lg"></i>
+                            </div>
+                            <span class="bg-neutral-900 text-neutral-300 text-[10px] font-mono font-bold px-3 py-1 rounded-full border border-neutral-800 uppercase tracking-wider">FREE SYSTEM</span>
+                        </div>
+                        <h4 class="font-bold text-xl text-white tracking-tight mb-2">Interactive Donation Board</h4>
+                        <p class="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed mb-4">
+                            Papan peringkat pendukung otomatis terintegrasi gamepass untuk apresiasi donatur game Anda.
+                        </p>
+                    </div>
+                    <a href="https://www.mediafire.com/file/ad3y8zxoscdznsh/Donation_Board_Permadiw_Studio.rbxm/file" target="_blank" class="w-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs py-3.5 rounded-2xl text-center transition shadow-lg tracking-wider uppercase flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download Asset</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAID SECTION -->
+        <section class="mb-12">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-3 border-b border-neutral-900 pb-5">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center space-x-3">
+                        <span class="bg-neutral-900 text-white p-2.5 rounded-2xl border border-neutral-800 text-sm"><i class="fa-solid fa-star"></i></span>
+                        <span>Enterprise Paid Systems & Community Giveaway</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 mb-8 text-xs text-neutral-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-1"><i class="fa-solid fa-bullhorn mr-2"></i>Informasi Giveaway Discord</h4>
+                    <p class="text-neutral-400 font-light">Di server Discord kami, selain menyediakan aset berbayar berkualitas tinggi, kami juga sering mengadakan <strong class="text-white">giveaway system paid secara gratis</strong> untuk para member setia!</p>
+                </div>
+                <a href="https://discord.gg/2Yuy2RR5B" target="_blank" class="bg-white hover:bg-neutral-200 text-black font-semibold px-4 py-2.5 rounded-xl uppercase tracking-wider shrink-0 transition">Join Discord</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+                    <div>
+                        <h4 class="font-bold text-xl text-white tracking-tight mb-2">Lobby System V1</h4>
+                        <p class="text-xs sm:text-sm text-neutral-400 font-light mb-6">Sistem lobi lengkap dengan map voting otomatis.</p>
+                    </div>
+                    <a href="https://discord.gg/2Yuy2RR5B" target="_blank" class="w-full bg-white text-black font-semibold text-xs py-3.5 rounded-2xl text-center uppercase flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-discord text-sm"></i> <span>Acquire via Discord</span>
+                    </a>
+                </div>
+                <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+                    <div>
+                        <h4 class="font-bold text-xl text-white tracking-tight mb-2">AFK System V1</h4>
+                        <p class="text-xs sm:text-sm text-neutral-400 font-light mb-6">Sistem anti-AFK dan reward berkala otomatis.</p>
+                    </div>
+                    <a href="https://discord.gg/2Yuy2RR5B" target="_blank" class="w-full bg-white text-black font-semibold text-xs py-3.5 rounded-2xl text-center uppercase flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-discord text-sm"></i> <span>Acquire via Discord</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-neutral-900 mt-20 py-10 text-center text-xs text-neutral-500 px-4 font-mono">
+        <p>&copy; 2026 Perma Diw Studio. All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPT LOGIKA BERURUTAN SATU PERSATU -->
+    <script>
+        let completedSteps = { 1: false, 2: false, 3: false };
+
+        function triggerStep(stepNum) {
+            const btn = document.getElementById(`btnStep${stepNum}`);
+            const textDesc = document.getElementById(`textStep${stepNum}`);
+            
+            if (completedSteps[stepNum]) return;
+
+            let timeLeft = 30;
+            btn.style.pointerEvents = 'none';
+            btn.className = "w-full sm:w-auto text-center bg-neutral-800 text-neutral-400 text-xs px-4 py-2.5 rounded-xl font-medium cursor-wait border border-neutral-700";
+            
+            let timer = setInterval(() => {
+                timeLeft--;
+                btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1.5"></i> Memeriksa (${timeLeft}s)...`;
+                textDesc.innerHTML = `Mohon tetap di halaman YouTube selama pengecekan... (${timeLeft}s)`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    completedSteps[stepNum] = true;
+
+                    const badge = document.getElementById(`step${stepNum}Badge`);
+                    badge.className = "w-7 h-7 rounded-xl bg-white text-black flex items-center justify-center text-xs font-mono font-bold shrink-0 shadow-md";
+                    badge.innerHTML = '<i class="fa-solid fa-check text-[10px]"></i>';
+
+                    btn.className = "w-full sm:w-auto text-center bg-neutral-900 text-white text-xs px-4 py-2.5 rounded-xl font-medium border border-neutral-700";
+                    btn.innerHTML = `<i class="fa-solid fa-circle-check text-white mr-1.5"></i> Selesai`;
+                    textDesc.innerHTML = `<span class="text-white font-medium">Verifikasi langkah ${stepNum} berhasil!</span>`;
+
+                    unlockNextStep(stepNum + 1);
+                }
+            }, 1000);
+        }
+
+        function unlockNextStep(nextNum) {
+            if (nextNum <= 3) {
+                const nextCard = document.getElementById(`cardStep${nextNum}`);
+                const nextBtn = document.getElementById(`btnStep${nextNum}`);
+                const nextText = document.getElementById(`textStep${nextNum}`);
+
+                nextCard.style.opacity = "1";
+                nextCard.style.pointerEvents = "auto";
+                nextCard.className = "bg-neutral-900/60 border border-neutral-700 p-4 rounded-2xl transition shadow-lg";
+                
+                nextBtn.className = "w-full sm:w-auto text-center bg-white hover:bg-neutral-200 text-black text-xs px-4 py-2.5 rounded-xl font-semibold transition shadow-md cursor-pointer";
+                nextText.innerHTML = "Silakan klik untuk melanjutkan verifikasi.";
+
+                document.getElementById('globalStatus').innerHTML = `Status: Langkah ${nextNum - 1} selesai. Silakan lanjut ke Langkah 0${nextNum}.`;
+            } else {
+                document.getElementById('globalStatus').innerHTML = "<span class='text-white font-bold'>Semua protokol berhasil diselesaikan! Membuka akses...</span>";
+                document.getElementById('lockIcon').className = "fa-solid fa-unlock text-white";
+                
+                setTimeout(() => {
+                    document.getElementById('verificationSection').style.display = 'none';
+                    document.getElementById('assetContentSection').classList.remove('hidden');
+                    window.scrollTo({ top: 350, behavior: 'smooth' });
+                }, 1500);
+            }
+        }
+    </script>
+</body>
+</html>
